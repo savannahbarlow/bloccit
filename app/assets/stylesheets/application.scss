@@ -25,3 +25,25 @@
 .nav {
   margin-top: 5px;
 }
+
+.gravatar {
+  margin-right: 10px;
+  margin-bottom: 5px;
+  height: 50px;
+  width: 50px;
+  float:left;
+  vertical-align: middle;
+}
+
+.gravatar_image {
+  margin-right: 10px;
+  height: 50px;
+  width: 50px;
+  float:left;
+  vertical-align: middle;
+}
+
+.current-user-info{
+  margin-top:25px;
+  display: inline-block;
+}
