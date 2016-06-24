@@ -29,7 +29,7 @@ RSpec.describe TopicsController, type: :controller do
        it "redirects from private topics" do
         get :show, {id: my_private_topic.id}
         expect(response).to redirect_to(new_session_path)
-     end
+      end
 
         it "returns http success" do
           get :show, {id: my_topic.id}
@@ -48,11 +48,11 @@ RSpec.describe TopicsController, type: :controller do
       end
 
       describe "GET new" do
-     it "returns http success" do
-       get :new
-       expect(response).to redirect_to(new_session_path)
-     end
-   end
+        it "returns http success" do
+          get :new
+          expect(response).to redirect_to(new_session_path)
+        end
+      end
 
    describe "POST create" do
      it "returns http redirect" do
