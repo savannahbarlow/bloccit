@@ -9,7 +9,7 @@ class Api::V1::CommentsController < Api::V1::BaseController
   end
 
   def show
-    comments = Comment.find(params[:id])
+    comment = Comment.find(params[:id])
     render json: comment.to_json, status: 200
   end
 end

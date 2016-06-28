@@ -27,7 +27,7 @@ end
 
 context "unauthorized user" do
   before do
-    controller.request.env['HTTP_AUTHORIZATION'] = ActionController::HttpAuthenication::
+    controller.request.env['HTTP_AUTHORIZATION'] = ActionController::HTTPAuthentication::
       Token.encode_credentials(my_user.auth_token)
   end
 
