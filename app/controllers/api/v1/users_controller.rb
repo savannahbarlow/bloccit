@@ -18,7 +18,7 @@ class Api::V1::UsersController < Api::V1::BaseController
      if user.update_attributes(user_params)
        render json: user, status: 200
      else
-       render json: {error: "user update failed", status: 400}, status: 400
+       render json: {error: "User update failed", status: 400}, status: 400
      end
    end
 

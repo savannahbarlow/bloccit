@@ -25,6 +25,11 @@ require 'rails_helper'
        post :create, user: {name: new_user.name, email: new_user.email, password: new_user.password}
        expect(response).to have_http_status(401)
      end
+
+     it "DELETE destroy returns http unauthenticated" do
+       delete :destroy, id: my_topic.id
+       expect(response).to have_http_status(401)
+end
    end
 
    context "authenticated and unauthorized users" do
@@ -121,16 +126,16 @@ require 'rails_helper'
            put :update, id: my_user.id, user: {name: "", email: "bademail@", password: "short"}
          end
 
-         it "returns http status" do
+         it "returns http error" do
            expect(response).to have_http_status(400)
          end
 
          it "returns the correct json error message" do
-           expect(response.body).to eq({error: "user update failed", status: 400}.to_json)
+           expect(response.body).to eq({error: "User update failed", status: 400}.to_json)
          end
        end
      end
-     
+
      describe "POST create" do
        context "with valid attributes" do
          before do

@@ -14,7 +14,7 @@ end
       post '/down-vote' => 'votes#down_vote', as: :down_vote
   end
 
-  resources :users, only: [:new, :create, :show]
+  resources :users, only: [:new, :create, :show,]
   resources :sessions, only: [:new, :create, :destroy]
 
 
